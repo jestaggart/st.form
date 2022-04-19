@@ -6,7 +6,7 @@ Typically, whenever a user interacts with a widget, the Streamlit app is rerun.
 
 A form is a container that visually groups other elements and widgets together, and contains a Submit button. Herein, a user can interacts with one or more widgets for as many times as they like without causing a rerun. Finally, when the form's Submit button is pressed, all widget values inside the form will be sent to Streamlit in a single batch.
 
-To add elements to a form object, you can use the `with` notation (preferred) or just call methods directly on the form (by first assigning it to a variable and subsequently applying Streamlit methods on it). See in the example app.
+To add elements to a form object, you can use the `with` notation (preferred) or you could use it as an object notation by just calling methods directly on the form (by first assigning it to a variable and subsequently applying Streamlit methods on it). See in the example app.
 
 Forms have a few constraints:
 - Every form must contain a `st.form_submit_button`.
