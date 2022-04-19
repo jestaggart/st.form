@@ -35,7 +35,7 @@ else:
 
 # Short example of using an object notation
 st.header('Example of object notation')
-form = st.form("my_form")
+form = st.form("my_form_2")
 form.slider("Inside the form")
 st.slider("Outside the form")
 form.form_submit_button("Submit")
