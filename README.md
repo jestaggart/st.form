@@ -59,5 +59,25 @@ The very first thing to do when creating a Streamlit app is to start by importin
 import streamlit as st
 ```
 
+This is followed by creating a title text for the app:
+```python
+st.title('st.form')
+
+Next, we'll apply the `st.form` via the `write` notation:
+```python
+with st.form('my_form'):
+    st.write('**Order your coffee**')
+    
+    coffee_bean_val = st.selectbox('Coffee bean', ['Arabica', 'Robusta'])
+    coffee_roast_val = st.selectbox('Coffee roast', ['Light', 'Medium', 'Dark'])
+    brewing_val = st.selectbox('Brewing method', ['Aeropress', 'Drip', 'French press', 'Moka pot', 'Siphon'])
+    serving_type_val = st.selectbox('Serving format', ['Hot', 'Iced', 'Frappe'])
+    milk_val = st.select_slider('Milk intensity', ['None', 'Low', 'Medium', 'High'])
+    owncup_val = st.checkbox('Bring own cup')
+    
+    # Every form must have a submit button.
+    submitted = st.form_submit_button('Submit')
+```
+
 ## Further reading
 - [Introducing Submit button and Forms](https://blog.streamlit.io/introducing-submit-button-and-forms/)
