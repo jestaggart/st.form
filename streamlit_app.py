@@ -2,7 +2,6 @@ import streamlit as st
 
 st.title('st.form')
 
-st.header('Declared using the `with` statement')
 with st.form('my_form'):
     st.write('**Order your coffee**')
     
@@ -28,6 +27,3 @@ if submitted:
         ''')
 else:
     st.write('☝️ Place your order!')
-
-#st.header('Declared using object notation')
-#form = st.form('my_form_2')
