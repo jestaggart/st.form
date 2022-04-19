@@ -13,7 +13,7 @@ Forms have a few constraints:
 - `st.button` and `st.download_button` cannot be added to a form.
 - Forms can appear anywhere in your app (sidebar, columns, etc), but they cannot be embedded inside other forms.
 
-For more information about forms, check out our blog post.
+For more information about forms, check out our [blog post](https://blog.streamlit.io/introducing-submit-button-and-forms/).
 
 ## Demo app
 
