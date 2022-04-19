@@ -28,5 +28,17 @@ with st.form('my_form'):
 
 st.write('☝️ Place your order!')
 
+if submitted:
+    st.markdown(f'''
+        You have ordered:
+        - Coffee bean: `{coffee_bean_val}`
+        - Coffee roast: `{coffee_roast_val}`
+        - Brewing: `{brewing_val}`
+        - Serving type: `{serving_type_val}`
+        - Milk: `{milk_val}`
+        - Bring own cup: `{owncup_val}`
+        ''')
+
+
 #st.header('Declared using object notation')
 #form = st.form('my_form_2')
