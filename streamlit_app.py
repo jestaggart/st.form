@@ -20,7 +20,6 @@ with st.form('my_form'):
         st.write('Milk: ', milk_val)
 
 st.write('Outside the form')
-st.write(brewing_val)
 
 #st.header('Declared using object notation')
 #form = st.form('my_form_2')
