@@ -5,7 +5,7 @@ st.title('st.form')
 st.header('Declared using the `with` statement')
 with st.form('my_form'):
     st.write('Inside the form')
-    cofee_roast_val = st.selectbox('Coffee roast', ['Light', 'Medium', 'Dark])
+    cofee_roast_val = st.selectbox('Coffee roast', ['Light', 'Medium', 'Dark'])
     checkbox_val = st.checkbox('Form checkbox')
 
     # Every form must have a submit button.
