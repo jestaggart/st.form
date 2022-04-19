@@ -17,7 +17,7 @@ with st.form('my_form'):
 
 if submitted:
     st.markdown(f'''
-        You have ordered:
+        ☕ You have ordered:
         - Coffee bean: `{coffee_bean_val}`
         - Coffee roast: `{coffee_roast_val}`
         - Brewing: `{brewing_val}`
