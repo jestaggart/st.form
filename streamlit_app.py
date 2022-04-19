@@ -2,9 +2,13 @@ import streamlit as st
 
 st.title('st.form')
 
+# Full example of using the with notation
+st.header('Example of using `with` notation')
+st.subheader('Coffee machine')
 with st.form('my_form'):
     st.write('**Order your coffee**')
     
+    # Input widgets
     coffee_bean_val = st.selectbox('Coffee bean', ['Arabica', 'Robusta'])
     coffee_roast_val = st.selectbox('Coffee roast', ['Light', 'Medium', 'Dark'])
     brewing_val = st.selectbox('Brewing method', ['Aeropress', 'Drip', 'French press', 'Moka pot', 'Siphon'])
@@ -12,7 +16,7 @@ with st.form('my_form'):
     milk_val = st.select_slider('Milk intensity', ['None', 'Low', 'Medium', 'High'])
     owncup_val = st.checkbox('Bring own cup')
     
-    # Every form must have a submit button.
+    # Every form must have a submit button
     submitted = st.form_submit_button('Submit')
 
 if submitted:
@@ -27,3 +31,11 @@ if submitted:
         ''')
 else:
     st.write('☝️ Place your order!')
+
+
+# Short example of using an object notation
+st.header('Example of object notation')
+form = st.form("my_form")
+form.slider("Inside the form")
+st.slider("Outside the form")
+form.form_submit_button("Submit")
