@@ -27,7 +27,7 @@ if submitted:
         - Bring own cup: `{owncup_val}`
         ''')
  else:
-    st.write('☝️ Place your order!')
+     st.write('☝️ Place your order!')
 
 #st.header('Declared using object notation')
 #form = st.form('my_form_2')
