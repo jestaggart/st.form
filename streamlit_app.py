@@ -3,7 +3,7 @@ import streamlit as st
 st.title('st.form')
 
 # Full example of using the with notation
-st.header('Example of using `with` notation')
+st.header('1. Example of using `with` notation')
 st.subheader('Coffee machine')
 with st.form('my_form'):
     st.write('**Order your coffee**')
@@ -34,7 +34,7 @@ else:
 
 
 # Short example of using an object notation
-st.header('Example of object notation')
+st.header('2. Example of object notation')
 
 form = st.form('my_form_2')
 selected_val = form.slider('Select a value')
