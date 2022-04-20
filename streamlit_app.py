@@ -5,6 +5,7 @@ st.title('st.form')
 # Full example of using the with notation
 st.header('1. Example of using `with` notation')
 st.subheader('Coffee machine')
+
 with st.form('my_form'):
     st.write('**Order your coffee**')
     
