@@ -62,11 +62,12 @@ import streamlit as st
 This is followed by creating a title text for the app:
 ```python
 st.title('st.form')
+```
 
-Next, we'll apply the `st.form` via the `write` notation:
+Next, we'll apply the `st.form` command via the `write` notation. Inside the form, we'll start with writing a subheader `Order your coffee` then create several input widgets (`st.selectbox`, `st.select_slider` and `st.checkbox`) to collect information about the coffee order. Finally, a submit button is created via the `st.form_submit_button` command, which when clicked on will send all user input as a single batch of information to the app for processing.
 ```python
 with st.form('my_form'):
-    st.write('**Order your coffee**')
+    st.subheader('**Order your coffee**')
     
     coffee_bean_val = st.selectbox('Coffee bean', ['Arabica', 'Robusta'])
     coffee_roast_val = st.selectbox('Coffee roast', ['Light', 'Medium', 'Dark'])
