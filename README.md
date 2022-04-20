@@ -131,4 +131,5 @@ st.write('Selected value: ', selected_val)
 ```
 
 ## Further reading
+- [`st.form`](https://docs.streamlit.io/library/api-reference/control-flow/st.form)
 - [Introducing Submit button and Forms](https://blog.streamlit.io/introducing-submit-button-and-forms/)
