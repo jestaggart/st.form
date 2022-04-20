@@ -79,6 +79,7 @@ This is followed by creating a title text for the app:
 st.title('st.form')
 ```
 
+### First example
 Let's start with the first example, here we'll apply the `st.form` command via the `write` notation. Inside the form, we'll start with writing a subheader `Order your coffee` then create several input widgets (`st.selectbox`, `st.select_slider` and `st.checkbox`) to collect information about the coffee order. Finally, a submit button is created via the `st.form_submit_button` command, which when clicked on will send all user input as a single batch of information to the app for processing.
 ```python
 # Full example of using the with notation
@@ -113,6 +114,20 @@ if submitted:
         ''')
 else:
     st.write('☝️ Place your order!')
+```
+
+
+### Second example
+Let's now proceed to the second example on using the `st.form` as an object notation. Here, the `st.form` command is assigned to the `form` variable. Subsequently, various Streamlit commands such as `slider` or `form_submit_button` is applied on the `form` variable.
+```python
+# Short example of using an object notation
+st.header('2. Example of object notation')
+
+form = st.form('my_form_2')
+selected_val = form.slider('Select a value')
+form.form_submit_button('Submit')
+
+st.write('Selected value: ', selected_val)
 ```
 
 ## Further reading
