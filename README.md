@@ -79,7 +79,7 @@ This is followed by creating a title text for the app:
 st.title('st.form')
 ```
 
-Next, we'll apply the `st.form` command via the `write` notation. Inside the form, we'll start with writing a subheader `Order your coffee` then create several input widgets (`st.selectbox`, `st.select_slider` and `st.checkbox`) to collect information about the coffee order. Finally, a submit button is created via the `st.form_submit_button` command, which when clicked on will send all user input as a single batch of information to the app for processing.
+Let's start with the first example, here we'll apply the `st.form` command via the `write` notation. Inside the form, we'll start with writing a subheader `Order your coffee` then create several input widgets (`st.selectbox`, `st.select_slider` and `st.checkbox`) to collect information about the coffee order. Finally, a submit button is created via the `st.form_submit_button` command, which when clicked on will send all user input as a single batch of information to the app for processing.
 ```python
 # Full example of using the with notation
 st.header('1. Example of using `with` notation')
@@ -97,6 +97,22 @@ with st.form('my_form'):
     
     # Every form must have a submit button.
     submitted = st.form_submit_button('Submit')
+```
+
+Next, we'll add the logic of what happen's after the submit button is clicked on. By default, whenever the Streamlit app is loaded the `else` statement will be run and we see a message `☝️ Place your order!`. Whereas upon clicking on the submit button, all user provided input via the various widgets are stored in several variables (e.g. `coffee_bean_val`, `coffee_roast_val`, etc.) and printed out via the `st.markdown` command with the help of f-string.
+```python
+if submitted:
+    st.markdown(f'''
+        ☕ You have ordered:
+        - Coffee bean: `{coffee_bean_val}`
+        - Coffee roast: `{coffee_roast_val}`
+        - Brewing: `{brewing_val}`
+        - Serving type: `{serving_type_val}`
+        - Milk: `{milk_val}`
+        - Bring own cup: `{owncup_val}`
+        ''')
+else:
+    st.write('☝️ Place your order!')
 ```
 
 ## Further reading
